@@ -20,3 +20,7 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
       id-type: auto
+obs:
+  endPoint: https://obs.cn-east-3.myhuaweicloud.com
+  ak: HZGYFUM00DDEENJTMRSG
+  sk: ZRuVVZ3Ty7N271xuIe36XeBwRNdmLCSgIMdKPga7
