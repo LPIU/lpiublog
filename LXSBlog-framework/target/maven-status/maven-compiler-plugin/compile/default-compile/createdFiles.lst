@@ -1,3 +1,4 @@
+com\lxs\service\CommentService.class
 com\lxs\config\RedisConfig.class
 com\lxs\domain\entity\Category.class
 com\lxs\service\impl\LinkServiceImpl.class
@@ -9,7 +10,9 @@ com\lxs\exception\SystemException.class
 com\lxs\config\WebConfig.class
 com\lxs\mapper\UserMapper.class
 com\lxs\service\impl\BlogLoginServiceImpl.class
+com\lxs\utils\SecurityUtils.class
 com\lxs\domain\vo\PageVo.class
+com\lxs\handler\mubatisplus\MyMetaObjectHandler.class
 com\lxs\mapper\LinkMapper.class
 com\lxs\service\ArticleService.class
 com\lxs\service\impl\UserServiceImpl.class
@@ -17,15 +20,20 @@ com\lxs\service\impl\CategoryServiceImpl.class
 com\lxs\domain\vo\HotArticleVo.class
 com\lxs\domain\vo\CategoryVo.class
 com\lxs\utils\BeanCopyUtils.class
+com\lxs\service\UploadService.class
 com\lxs\domain\entity\Article.class
 com\lxs\domain\entity\User.class
 com\lxs\config\FastJsonRedisSerializer.class
+com\lxs\domain\vo\CommentVo.class
 com\lxs\utils\WebUtils.class
 com\lxs\mapper\ArticleMapper.class
 com\lxs\handler\security\AccessDeniedHandlerImpl.class
+com\lxs\domain\entity\Comment.class
 com\lxs\domain\ResponseResult.class
 com\lxs\domain\entity\Link.class
+com\lxs\service\impl\UploadServiceImpl.class
 com\lxs\handler\security\AuthenticationEntryPointImpl.class
+com\lxs\mapper\CommentMapper.class
 com\lxs\constants\SystemConstants.class
 com\lxs\domain\vo\LinkVo.class
 com\lxs\service\CategoryService.class
@@ -33,6 +41,7 @@ com\lxs\mapper\CategoryMapper.class
 com\lxs\domain\vo\UserInfoVo.class
 com\lxs\utils\JwtUtil.class
 com\lxs\config\MbatisPlusConfig.class
+com\lxs\service\impl\CommentServiceImpl.class
 com\lxs\domain\vo\ArticleListVo.class
 com\lxs\service\impl\ArticleServiceImpl.class
 com\lxs\service\BlogLoginService.class

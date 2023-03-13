@@ -43,6 +43,7 @@ D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\BlogLo
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\PageVo.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\CategoryService.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\exception\SystemException.java
+D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\utils\PathUtils.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\LinkService.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\entity\User.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\entity\Category.java
