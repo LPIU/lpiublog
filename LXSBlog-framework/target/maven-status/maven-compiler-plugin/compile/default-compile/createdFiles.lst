@@ -30,6 +30,7 @@ com\lxs\mapper\ArticleMapper.class
 com\lxs\handler\security\AccessDeniedHandlerImpl.class
 com\lxs\domain\entity\Comment.class
 com\lxs\domain\ResponseResult.class
+com\lxs\aspect\LogAspect.class
 com\lxs\domain\entity\Link.class
 com\lxs\service\impl\UploadServiceImpl.class
 com\lxs\handler\security\AuthenticationEntryPointImpl.class
@@ -48,5 +49,6 @@ com\lxs\service\BlogLoginService.class
 com\lxs\handler\exception\GlobalExceptionHandler.class
 com\lxs\service\impl\UserDetailsServiceImpl.class
 com\lxs\utils\RedisCache.class
+com\lxs\annotation\SystemLog.class
 com\lxs\service\UserService.class
 com\lxs\domain\enums\AppHttpCodeEnum.class

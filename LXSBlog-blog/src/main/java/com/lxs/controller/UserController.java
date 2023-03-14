@@ -1,5 +1,6 @@
 package com.lxs.controller;
 
+import com.lxs.annotation.SystemLog;
 import com.lxs.domain.ResponseResult;
 import com.lxs.domain.entity.User;
 import com.lxs.service.UserService;
@@ -23,6 +24,7 @@ public class UserController {
         return userService.userInfo();
     }
     @PutMapping("/userInfo")
+    @SystemLog(businessName = "更新用户信息")
     public ResponseResult updateUserInfo(@RequestBody User user){
         return userService.updateUserInfo(user);
     }
