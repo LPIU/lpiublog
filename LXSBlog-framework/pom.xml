@@ -95,5 +95,14 @@
             <artifactId>esdk-obs-java-bundle</artifactId>
             <version>[3.21.11,)</version>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
