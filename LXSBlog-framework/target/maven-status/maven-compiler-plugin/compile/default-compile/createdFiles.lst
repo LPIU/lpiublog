@@ -1,7 +1,9 @@
 com\lxs\service\CommentService.class
 com\lxs\config\RedisConfig.class
+com\lxs\service\RoleService.class
 com\lxs\domain\entity\Category.class
 com\lxs\service\impl\LinkServiceImpl.class
+com\lxs\domain\vo\AdminUserInfoVo.class
 com\lxs\service\LinkService.class
 com\lxs\domain\vo\ArticleDetailVo.class
 com\lxs\domain\entity\LoginUser.class
@@ -21,11 +23,13 @@ com\lxs\domain\vo\HotArticleVo.class
 com\lxs\domain\vo\CategoryVo.class
 com\lxs\utils\BeanCopyUtils.class
 com\lxs\service\UploadService.class
+com\lxs\domain\entity\Role.class
 com\lxs\domain\entity\Article.class
 com\lxs\domain\entity\User.class
 com\lxs\config\FastJsonRedisSerializer.class
 com\lxs\domain\vo\CommentVo.class
 com\lxs\utils\WebUtils.class
+com\lxs\mapper\RoleMapper.class
 com\lxs\mapper\ArticleMapper.class
 com\lxs\handler\security\AccessDeniedHandlerImpl.class
 com\lxs\domain\entity\Comment.class
@@ -42,6 +46,7 @@ com\lxs\mapper\CategoryMapper.class
 com\lxs\domain\vo\UserInfoVo.class
 com\lxs\utils\JwtUtil.class
 com\lxs\config\MbatisPlusConfig.class
+com\lxs\service\impl\RoleServiceImpl.class
 com\lxs\service\impl\CommentServiceImpl.class
 com\lxs\domain\vo\ArticleListVo.class
 com\lxs\service\impl\ArticleServiceImpl.class
