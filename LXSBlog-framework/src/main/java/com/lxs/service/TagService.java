@@ -1,7 +1,10 @@
 package com.lxs.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.TagListDto;
 import com.lxs.domain.entity.Tag;
+import com.lxs.domain.vo.PageVo;
 
 
 /**
@@ -12,4 +15,5 @@ import com.lxs.domain.entity.Tag;
  */
 public interface TagService extends IService<Tag> {
 
+    ResponseResult<PageVo> pagTagList(Integer pageNum, Integer pageSize, TagListDto tagListDto);
 }

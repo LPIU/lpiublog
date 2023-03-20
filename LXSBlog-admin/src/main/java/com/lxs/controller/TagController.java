@@ -1,6 +1,8 @@
 package com.lxs.controller;
 
 import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.TagListDto;
+import com.lxs.domain.vo.PageVo;
 import com.lxs.mapper.TagMapper;
 import com.lxs.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,7 @@ public class TagController {
     private TagService tagService;
 
     @GetMapping("/list")
-    public ResponseResult list(){
-        return ResponseResult.okResult(tagService.list());
+    public ResponseResult<PageVo> list(Integer pageNum, Integer pageSize, TagListDto tagListDto){
+        return tagService.pagTagList(pageNum,pageSize,tagListDto);
     }
-
 }
