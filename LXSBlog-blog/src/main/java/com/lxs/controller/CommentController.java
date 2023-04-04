@@ -2,7 +2,7 @@ package com.lxs.controller;
 
 import com.lxs.constants.SystemConstants;
 import com.lxs.domain.ResponseResult;
-import com.lxs.domain.dto.addCommentDto;
+import com.lxs.domain.dto.AddCommentDto;
 import com.lxs.domain.entity.Comment;
 import com.lxs.service.CommentService;
 import com.lxs.utils.BeanCopyUtils;
@@ -31,7 +31,7 @@ public class CommentController {
         return commentService.commentList(SystemConstants.ARTICLE_COMMENT,articleId,pageNum,pageSize);
     }
     @PostMapping
-    public ResponseResult addComment(@RequestBody addCommentDto commentAdd){
+    public ResponseResult addComment(@RequestBody AddCommentDto commentAdd){
         Comment comment = BeanCopyUtils.copyBean(commentAdd, Comment.class);
         return commentService.addComment(comment);
     }

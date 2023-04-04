@@ -1,6 +1,7 @@
 package com.lxs.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lxs.domain.ResponseResult;
 import com.lxs.domain.entity.Menu;
 
 import java.util.List;
@@ -17,4 +18,11 @@ public interface MenuService extends IService<Menu> {
 
     List<Menu> selectRouterMenuTreeByUserId(Long userId);
 
+    ResponseResult listMenu(String status, String menuName);
+
+    ResponseResult searchMenu(String id);
+
+    ResponseResult putMenu(Menu menu);
+
+    ResponseResult treeSelect();
 }

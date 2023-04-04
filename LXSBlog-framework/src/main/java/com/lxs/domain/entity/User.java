@@ -3,6 +3,9 @@ package com.lxs.domain.entity;
 import java.util.Date;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +23,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @NoArgsConstructor
 @TableName("lxs_user")
 public class User  {
-    //主键@TableId
+    //主键
+    @TableId
     private Long id;
 
     //用户名
@@ -41,13 +45,17 @@ public class User  {
     private String sex;
     //头像
     private String avatar;
+    @TableField(fill = FieldFill.INSERT)
     //创建人的用户id
     private Long createBy;
+    @TableField(fill = FieldFill.INSERT)
     //创建时间
     private Date createTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     //更新人
     private Long updateBy;
     //更新时间
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
     //删除标志（0代表未删除，1代表已删除）
     private Integer delFlag;

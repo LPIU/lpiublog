@@ -1,7 +1,10 @@
 package com.lxs.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.RolePutDto;
 import com.lxs.domain.entity.Role;
+import com.lxs.domain.vo.PageVo;
 
 import java.util.List;
 
@@ -15,4 +18,10 @@ import java.util.List;
 public interface RoleService extends IService<Role> {
 
     List<String> selectRoleKeyByUserId(Long id);
+
+    ResponseResult<PageVo> pageRoleList(Integer pageNum, Integer pageSize, String roleName, String status);
+
+    ResponseResult changeStatus(RolePutDto rolePutDto);
+
+
 }

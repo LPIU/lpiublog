@@ -1,6 +1,7 @@
 package com.lxs.controller;
 
 import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.UserSystemDto;
 import com.lxs.domain.entity.LoginUser;
 import com.lxs.domain.entity.Menu;
 import com.lxs.domain.entity.User;
@@ -12,6 +13,7 @@ import com.lxs.exception.SystemException;
 import com.lxs.service.LoginService;
 import com.lxs.service.MenuService;
 import com.lxs.service.RoleService;
+import com.lxs.service.UserService;
 import com.lxs.utils.BeanCopyUtils;
 import com.lxs.utils.RedisCache;
 import com.lxs.utils.SecurityUtils;
@@ -35,6 +37,7 @@ public class LoginController {
 
     @Autowired
     private RoleService roleService;
+
 
     @Autowired
     private RedisCache redisCache;
@@ -70,6 +73,7 @@ public class LoginController {
         //封装数据 返回
         return ResponseResult.okResult(new RoutersVo(menus));
     }
+
 
 }
 

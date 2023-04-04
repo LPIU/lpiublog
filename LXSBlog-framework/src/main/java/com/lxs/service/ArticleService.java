@@ -2,7 +2,9 @@ package com.lxs.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.AddArticleDto;
 import com.lxs.domain.entity.Article;
+import com.lxs.domain.vo.PUTArticleVo;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,4 +20,14 @@ public interface ArticleService extends IService<Article> {
     ResponseResult getArticleDetail(Long id);
 
     ResponseResult updateViewCount(Long id);
+
+    ResponseResult addArticle(AddArticleDto addArticleDto);
+
+    ResponseResult listArticle(Integer pageNum, Integer pageSize, String title, String summary);
+
+    ResponseResult inquireArticle(Long id);
+
+    ResponseResult PUTArticle(PUTArticleVo putArticleVo);
+
+    ResponseResult deleteArticle(Long id);
 }

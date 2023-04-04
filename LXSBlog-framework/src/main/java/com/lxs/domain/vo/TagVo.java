@@ -12,4 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TagVo {
+    private  Long id;
+    private String name;
+    private String remark;
 }

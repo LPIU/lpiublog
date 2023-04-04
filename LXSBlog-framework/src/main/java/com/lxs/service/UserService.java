@@ -2,6 +2,7 @@ package com.lxs.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.UserSystemDto;
 import com.lxs.domain.entity.User;
 
 
@@ -18,4 +19,5 @@ public interface UserService extends IService<User> {
     ResponseResult updateUserInfo(User user);
 
     ResponseResult register(User user);
+
 }

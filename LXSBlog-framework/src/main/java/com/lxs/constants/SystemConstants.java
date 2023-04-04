@@ -14,6 +14,9 @@ public class SystemConstants {
      */
     public static final int ARTICLE_STATUS_NORMAL = 0;
 
+    /**
+     * 状态正常
+     */
     public static final String STATUS_NORMAL = "0";
     /**
      * 友联审核通过
@@ -34,5 +37,10 @@ public class SystemConstants {
     public static final String ARTICLE_COMMENT = "0";
     public static final String MENU = "C";
     public static final String BUTTON = "F";
+    /**
+     * 类别状态正常
+     */
+    public static final String CATEGORY_STATUS_NORMAL = "0";
+    public static final String ADMAIN = "1";
 }
 
