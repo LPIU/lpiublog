@@ -2,6 +2,8 @@ package com.lxs.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.RoleAddDto;
+import com.lxs.domain.dto.RolePutByIdDto;
 import com.lxs.domain.dto.RolePutDto;
 import com.lxs.domain.entity.Role;
 import com.lxs.domain.vo.PageVo;
@@ -24,4 +26,13 @@ public interface RoleService extends IService<Role> {
     ResponseResult changeStatus(RolePutDto rolePutDto);
 
 
+    ResponseResult putRoleById(RoleAddDto roleAddDto);
+
+    ResponseResult selectRoleById(String id);
+
+    ResponseResult putRole(RolePutByIdDto rolePutByIdDto);
+
+    ResponseResult delRole(Long id);
+
+    ResponseResult listAllRole();
 }

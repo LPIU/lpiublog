@@ -1,7 +1,7 @@
 package com.lxs.controller;
 
 import com.lxs.domain.ResponseResult;
-import com.lxs.domain.dto.UserSystemDto;
+
 import com.lxs.domain.entity.LoginUser;
 import com.lxs.domain.entity.Menu;
 import com.lxs.domain.entity.User;

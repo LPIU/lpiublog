@@ -4,6 +4,8 @@ import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.util.MapUtils;
 import com.alibaba.fastjson.JSON;
 import com.lxs.domain.ResponseResult;
+import com.lxs.domain.dto.AddCategoryDto;
+import com.lxs.domain.dto.PutCategoryDto;
 import com.lxs.domain.entity.Category;
 import com.lxs.domain.enums.AppHttpCodeEnum;
 import com.lxs.domain.vo.CategoryVo;
@@ -13,9 +15,7 @@ import com.lxs.utils.BeanCopyUtils;
 import com.lxs.utils.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.resource.HttpResource;
 
 import javax.servlet.ServletContext;
@@ -39,8 +39,33 @@ public class CategoryController {
         List<CategoryVo> list= categoryService.listAllCategory();
         return ResponseResult.okResult(list);
     }
+    @GetMapping("/list1")
+    public ResponseResult list(){
+        List<CategoryVo> list= categoryService.listAllCategory();
+        return ResponseResult.okResult(list);
+    }
+    @GetMapping("/list")
+    public ResponseResult<Object> pageVoList(Integer pageNum,Integer pageSize,String name,String status ){
+        return categoryService.pageVoList(pageNum,pageSize,name,status);
+    }
 
+    @PostMapping("")
+    public ResponseResult addCategory(@RequestBody AddCategoryDto addCategoryDto){
+        return categoryService.addCategory(addCategoryDto);
+    }
 
+    @GetMapping("/{id}")
+    public ResponseResult getCategoryById(@PathVariable String id){
+        return categoryService.getCategoryById(id);
+    }
+    @PutMapping("")
+    public ResponseResult putCategory(@RequestBody PutCategoryDto putCategoryDto){
+        return categoryService.putCategory(putCategoryDto);
+    }
+    @DeleteMapping("/{id}")
+    public ResponseResult delCategory(@PathVariable Long id){
+        return categoryService.delCategory(id);
+    }
     @PreAuthorize("@ps.hasPermission('content:category:export')")
     @GetMapping("/export")
     public void export(HttpServletResponse response){
