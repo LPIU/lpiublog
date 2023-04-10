@@ -119,6 +119,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public ResponseResult addUserAndRole(UserAddDto userAddDto) {
         User user = BeanCopyUtils.copyBean(userAddDto, User.class);
+        String encode = passwordEncoder.encode(user.getPassword());
+        user.setPassword(encode);
         save(user);
         Long id = user.getId();
         Long[] roleIds = userAddDto.getRoleIds();
