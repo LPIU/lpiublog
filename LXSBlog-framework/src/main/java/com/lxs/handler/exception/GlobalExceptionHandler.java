@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(SystemException.class)
     public ResponseResult systemGlobalExceptionHandler(SystemException e){
         //打印异常信息
-        log.error("出现了异常！ {}",e);
+        log.error("出现业务异常！{}",e.toString());
         //从异常对象中获取提示信息返回
         return ResponseResult.errorResult(e.getCode(),e.getMsg());
     }
@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseResult exceptionHandler(Exception e){
         //打印异常信息
-        log.error("出现了异常！ {}",e);
+        log.error("出现了异常!  : {}",e.toString());
         //从异常对象中获取提示信息返回
         return ResponseResult.errorResult(AppHttpCodeEnum.SYSTEM_ERROR.getCode(),e.getMessage());
     }

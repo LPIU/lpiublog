@@ -25,5 +25,8 @@ public class UserInfoVo {
 
     private String email;
 
+    private String userName;
+    private String status;
+
 
 }

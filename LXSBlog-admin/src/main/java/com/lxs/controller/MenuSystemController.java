@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2023/3/30-20:59
  */
 @RestController
-@RequestMapping("system/menu")
+@RequestMapping("/system/menu")
 public class MenuSystemController {
     @Autowired
     private MenuService menuService;
@@ -33,6 +33,7 @@ public class MenuSystemController {
     }
     @GetMapping("/{id}")
     public ResponseResult searchMenu(@PathVariable String id){
+
         return menuService.searchMenu(id);
     }
     @PutMapping("")
@@ -47,5 +48,9 @@ public class MenuSystemController {
     @GetMapping("/treeselect")
     public ResponseResult treeSelect(){
         return menuService.treeSelect();
+    }
+    @GetMapping("/roleMenuTreeselect/{id}")
+    public ResponseResult treeSelectById(@PathVariable Long id){
+        return menuService.treeSelectById(id);
     }
 }

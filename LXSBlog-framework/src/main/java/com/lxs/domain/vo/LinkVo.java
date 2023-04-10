@@ -24,5 +24,6 @@ public class LinkVo {
     private String description;
     //网站地址
     private String address;
+    private String status;
 
 }

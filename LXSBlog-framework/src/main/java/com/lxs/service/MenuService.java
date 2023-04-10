@@ -25,4 +25,6 @@ public interface MenuService extends IService<Menu> {
     ResponseResult putMenu(Menu menu);
 
     ResponseResult treeSelect();
+
+    ResponseResult treeSelectById(Long id);
 }
