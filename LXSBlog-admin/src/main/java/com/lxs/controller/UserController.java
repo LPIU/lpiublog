@@ -2,6 +2,7 @@ package com.lxs.controller;
 
 import com.lxs.domain.ResponseResult;
 import com.lxs.domain.dto.UserAddDto;
+import com.lxs.domain.dto.UserPutDto;
 import com.lxs.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,9 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseResult selectUserById(@PathVariable Long id){
         return userService.selectUserById(id);
+    }
+    @PutMapping("")
+    public ResponseResult putUser(@RequestBody UserPutDto userPutDto){
+        return userService.putUser(userPutDto);
     }
 }

@@ -30,7 +30,7 @@ public class CommentController {
     public ResponseResult commentList(Long articleId,Integer pageNum,Integer pageSize ){
         return commentService.commentList(SystemConstants.ARTICLE_COMMENT,articleId,pageNum,pageSize);
     }
-    @PostMapping
+    @PostMapping("")
     public ResponseResult addComment(@RequestBody AddCommentDto commentAdd){
         Comment comment = BeanCopyUtils.copyBean(commentAdd, Comment.class);
         return commentService.addComment(comment);
@@ -39,11 +39,6 @@ public class CommentController {
 
 
     @GetMapping("/linkCommentList")
-    @ApiOperation(value = "友链评论列表",notes ="获取一页信息" )
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum", value = "页号"),
-            @ApiImplicitParam(name = "pageSize", value = "每页大小")
-    })
     public ResponseResult linkCommentList(Integer pageNum,Integer pageSize) {
         return commentService.commentList(SystemConstants.LINK_COMMENT,null,pageNum,pageSize);
     }

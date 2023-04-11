@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lxs.constants.SystemConstants;
 import com.lxs.domain.ResponseResult;
 import com.lxs.domain.entity.Comment;
+import com.lxs.domain.entity.User;
 import com.lxs.domain.enums.AppHttpCodeEnum;
 import com.lxs.domain.vo.CommentVo;
 import com.lxs.domain.vo.PageVo;
@@ -19,6 +20,8 @@ import com.lxs.service.CommentService;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * 评论表(Comment)表服务实现类
@@ -49,7 +52,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
         for (CommentVo commentVo : commentVoList) {
             //查询对应的子评论
-            List<CommentVo> children= getChildren(commentVo.getId()) ;
+            List<CommentVo> children = getChildren(commentVo.getId());
             //赋值
             commentVo.setChildren(children);
         }
@@ -76,7 +79,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     private List<CommentVo> getChildren(Long id) {
         LambdaQueryWrapper<Comment> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(Comment::getRootId,id);
-        queryWrapper.orderByDesc(Comment::getCreateTime);
+        queryWrapper.orderByAsc(Comment::getCreateTime);
         List<Comment> comments = list(queryWrapper);
         List<CommentVo> commentVos = toCommentVoList(comments);
         return commentVos;
@@ -91,13 +94,13 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
             commentVo.setUsername(nickName);
             //通过toCommentUserId查询用户昵称并赋值
             //如果toCommentUserId不为-1才进行查询
+            commentVo.setAvatar(userService.getById(commentVo.getCreateBy()).getAvatar());
             if(commentVo.getToCommentUserId()!=-1){
                 String toCommentUserName = userService.getById(commentVo.getToCommentUserId()).getNickName();
                 commentVo.setToCommentUserName(toCommentUserName);
             }
+
         }
         return commentVos;
     }
 }
-
-

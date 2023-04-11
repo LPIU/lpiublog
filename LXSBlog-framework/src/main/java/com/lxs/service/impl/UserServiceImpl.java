@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lxs.domain.ResponseResult;
 import com.lxs.domain.dto.UserAddDto;
+import com.lxs.domain.dto.UserPutDto;
 import com.lxs.domain.entity.Role;
 import com.lxs.domain.entity.SysUserRole;
 import com.lxs.domain.entity.User;
@@ -153,6 +154,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         UserSelectByIdVo userSelectByIdVo = new UserSelectByIdVo(collect,list,BeanCopyUtils.copyBean(user, UserInfoVo.class));
 
         return ResponseResult.okResult(userSelectByIdVo);
+    }
+
+    @Override
+    public ResponseResult putUser(UserPutDto userPutDto) {
+        User user = BeanCopyUtils.copyBean(userPutDto, User.class);
+        updateById(user);
+        return ResponseResult.okResult();
     }
 
 

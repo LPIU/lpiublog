@@ -2,6 +2,7 @@ D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\User
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\RoleVo.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\handler\security\AccessDeniedHandlerImpl.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\utils\BeanCopyUtils.java
+D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\handler\mybatisplus\MyMetaObjectHandler.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\ArticleTagService.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\ArticleService.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\impl\PermissionService.java
@@ -77,10 +78,10 @@ D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\User
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\impl\TagServiceImpl.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\entity\Link.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\mapper\CategoryMapper.java
+D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\dto\UserPutDto.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\dto\RoleAddDto.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\ArticleListVo.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\config\WebConfig.java
-D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\handler\mubatisplus\MyMetaObjectHandler.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\UserService.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\mapper\ArticleTagMapper.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\entity\Menu.java

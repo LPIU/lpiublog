@@ -28,7 +28,11 @@ public class ViewCountRunner implements CommandLineRunner {
         //查询博客信息 id ViewCount
         List<Article> articles = articleMapper.selectList(null);
         Map<String, Integer> viewCountMap = articles.stream()
-                .collect(Collectors.toMap(article1 -> article1.getId().toString(), article -> article.getViewCount().intValue()));
+                .collect(Collectors.toMap(
+                        article1 -> article1.getId().toString(),
+                        article -> article.getViewCount().intValue()
+                        )
+                );
         //存储到redis
         redisCache.setCacheMap("article:viewCount",viewCountMap);
     }

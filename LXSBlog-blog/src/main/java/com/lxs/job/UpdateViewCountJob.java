@@ -1,5 +1,6 @@
 package com.lxs.job;
 
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.lxs.domain.entity.Article;
 import com.lxs.service.ArticleService;
 import com.lxs.utils.RedisCache;
@@ -30,10 +31,16 @@ public class UpdateViewCountJob {
         //查询获redis中浏览量
         Map<String, Integer> viewCountMap = redisCache.getCacheMap("article:viewCount");
         List<Article> articles = viewCountMap.entrySet()
-                .stream().
-                map(entry -> new Article(Long.valueOf(entry.getKey()), entry.getValue().longValue()))
+                .stream()
+                .map(entry -> new Article(Long.valueOf(entry.getKey()), entry.getValue().longValue()))
                 .collect(Collectors.toList());
         //更新到数据库中
-        articleService.updateBatchById(articles);
+        for (Article article : articles) {
+            LambdaUpdateWrapper<Article> updateWrapper = new LambdaUpdateWrapper<>();
+            updateWrapper.eq(Article :: getId, article.getId());
+            updateWrapper.set(Article :: getViewCount, article.getViewCount());
+            articleService.update(updateWrapper);
+        }
+
     }
 }

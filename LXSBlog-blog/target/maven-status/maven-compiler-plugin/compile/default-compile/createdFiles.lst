@@ -3,7 +3,6 @@ com\lxs\controller\LinkController.class
 com\lxs\job\UpdateViewCountJob.class
 com\lxs\controller\ArticleController.class
 com\lxs\config\SwaggerConfig.class
-com\lxs\runner\TestRunner.class
 com\lxs\config\SecurityConfig.class
 com\lxs\controller\CommentController.class
 com\lxs\controller\UploadController.class

@@ -1,4 +1,4 @@
-package com.lxs.handler.mubatisplus;
+package com.lxs.handler.mybatisplus;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.lxs.utils.SecurityUtils;
@@ -27,6 +27,6 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void updateFill(MetaObject metaObject) {
         this.setFieldValByName("updateTime", new Date(), metaObject);
-        this.setFieldValByName(" ", SecurityUtils.getUserId(), metaObject);
+        this.setFieldValByName("updateBy", SecurityUtils.getUserId(), metaObject);
     }
 }
