@@ -30,4 +30,6 @@ public interface UserService extends IService<User> {
     ResponseResult selectUserById(Long id);
 
     ResponseResult putUser(UserPutDto userPutDto);
+
+    ResponseResult loginasd(String ph);
 }

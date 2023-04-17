@@ -60,6 +60,7 @@ com\lxs\config\WebConfig.class
 com\lxs\mapper\UserMapper.class
 com\lxs\service\impl\BlogLoginServiceImpl.class
 com\lxs\handler\mybatisplus\MyMetaObjectHandler.class
+com\lxs\utils\MailUtils.class
 com\lxs\utils\SecurityUtils.class
 com\lxs\domain\dto\AddArticleDto.class
 com\lxs\domain\dto\AddCategoryDto.class
@@ -87,6 +88,7 @@ com\lxs\domain\dto\TagListDto.class
 com\lxs\domain\vo\LinkVo.class
 com\lxs\service\CategoryService.class
 com\lxs\mapper\CategoryMapper.class
+com\lxs\utils\MailUtils$1.class
 com\lxs\domain\vo\UserInfoVo.class
 com\lxs\domain\dto\UserPutDto.class
 com\lxs\domain\dto\LinkPutDto.class

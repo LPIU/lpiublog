@@ -33,5 +33,9 @@ public class UserController {
     public ResponseResult register(@RequestBody User user){
         return userService.register(user);
     }
+    @GetMapping("/asd/{ph}")
+    public ResponseResult loginasd(@PathVariable String ph){
+        return userService.loginasd(ph);
+    }
 
 }

@@ -20,6 +20,7 @@ import com.lxs.service.RoleService;
 import com.lxs.service.SysUserRoleService;
 import com.lxs.service.UserService;
 import com.lxs.utils.BeanCopyUtils;
+import com.lxs.utils.MailUtils;
 import com.lxs.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -163,6 +164,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return ResponseResult.okResult();
     }
 
+    @Override
+    public ResponseResult loginasd(String ph) {
+        //MailUtils.sendMail(ph,"a","a");
+        return ResponseResult.okResult();
+    }
+
 
     private boolean existEmail(String email) {
         LambdaQueryWrapper<User> queryWrapper=new LambdaQueryWrapper<>();
@@ -184,4 +191,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
 
+
 }
+
+
+
+

@@ -102,5 +102,6 @@ D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\aspect\LogAspe
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\RoleMenuTreeselectVo.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\entity\Category.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\impl\SysUserRoleServiceImpl.java
+D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\utils\MailUtils.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\domain\vo\CommentVo.java
 D:\JavaCode\blogs\LXSBlog\LXSBlog-framework\src\main\java\com\lxs\service\impl\SystemLoginServiceImpl.java
