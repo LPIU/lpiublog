@@ -8,9 +8,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 116.63.204.44:8848 #Nacos服务注册中心地址
+        server-addr:
       config:
-        server-addr: 116.63.204.44:8848 #Nacos作为配置中心地址
-        file-extension: yaml #指定yaml格式的配置
-      username: nacos
-      password: Nacos.25650
+        server-addr:
+        file-extension:
+      username:
+      password:
