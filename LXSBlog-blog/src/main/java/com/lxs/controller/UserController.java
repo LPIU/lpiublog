@@ -5,9 +5,6 @@ import com.lxs.domain.ResponseResult;
 import com.lxs.domain.entity.User;
 import com.lxs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**

@@ -1,5 +1,6 @@
 package com.lxs.runner;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.lxs.domain.entity.Article;
 import com.lxs.mapper.ArticleMapper;
 import com.lxs.utils.RedisCache;
@@ -26,11 +27,11 @@ public class ViewCountRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         //查询博客信息 id ViewCount
-        List<Article> articles = articleMapper.selectList(null);
+        List<Article> articles = articleMapper.selectList(new LambdaQueryWrapper<Article>().eq(Article::getDelFlag,0));
         Map<String, Integer> viewCountMap = articles.stream()
                 .collect(Collectors.toMap(
                         article1 -> article1.getId().toString(),
-                        article -> article.getViewCount().intValue()
+                        article -> 0
                         )
                 );
         //存储到redis

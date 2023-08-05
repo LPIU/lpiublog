@@ -79,6 +79,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
         lambdaQueryWrapper.eq(Objects.nonNull(categoryId)&&categoryId>0,Article::getCategoryId,categoryId);
         //状态是正式发布的
         lambdaQueryWrapper.eq(Article::getStatus,SystemConstants.ARTICLE_STATUS_NORMAL);
+        lambdaQueryWrapper.eq(Article::getDelFlag,SystemConstants.STATUS_NORMAL);
         //对idTop进行降序
         lambdaQueryWrapper.orderByDesc(Article::getIsTop);
         //分页查询
@@ -121,9 +122,11 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
         Integer viewCount = redisCache.getCacheMapValue("article:viewCount", id.toString());
         //转换成vo
         ArticleDetailVo articleDetailVo = BeanCopyUtils.copyBean(article, ArticleDetailVo.class);
-        article.setViewCount(viewCount.longValue());
+//        article.setViewCount(viewCount.longValue());
         //根据分类id查询分类名
         Long categoryId = articleDetailVo.getCategoryId();
+        Long viewCount1 = article.getViewCount()+viewCount;
+        article.setViewCount(viewCount1);
         Category category = categoryService.getById(categoryId);
         if (category != null) {
             articleDetailVo.setCategoryName(category.getName());
